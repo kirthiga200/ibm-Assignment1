@@ -1,0 +1,120 @@
+1. s = "Hi there Sam!"
+x = s.split()
+print(x) 
+Output: H i t h e r e S a m !
+
+2. planet = "Earth"
+diameter = 12742
+print( 'The diameter of {} is {} kilometers.' .format(planet,diameter));
+Output: The diameter of Earth is 12742 kilometers.
+planet = "Earth"
+diameter = 12742
+
+3. lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
+a=lst[3][1][2];
+print(a)
+Output: hello
+
+4.1 import numpy as np
+array=np.zeros(10)
+print("An array of 10 zeros:")
+print(array)        
+Output: An array of 10 zeros:
+[ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+
+4.2 array=np.ones(10)*5
+print("An array of 10 fives:")
+print(array)   
+Output: An array of 10 fives:
+[ 5.  5.  5.  5.  5.  5.  5.  5.  5.  5.]
+
+5. import numpy as np
+array=np.arange(20,35,2)
+print("Array of all the even integers from 20 to 35")
+print(array)
+Output: Array of all the even integers from 20 to 35
+[20 22 24 26 28 30 32 34]
+
+
+6. np.arange(0,9).reshape((3,3))
+Output: 
+array([[0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8]])
+      
+7. a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+np.stack((a, b))
+Output: array([[1, 2, 3],
+               [4, 5, 6]])
+
+8. import pandas as pd 
+data = [['tom', 10], ['nick', 15], ['juli', 14]] 
+df = pd.DataFrame(data, columns=['Name', 'Age']) 
+df
+Output:
+    Name   Age
+ 0  tom    10
+ 1  nick   15
+ 2  juli   14
+
+9. import datetime
+ 
+start = datetime.datetime.strptime("2023-01-01", "%Y-%m-%d")
+end = datetime.datetime.strptime("2023-02-10", "%Y-%m-%d")
+date_array = \
+    (start + datetime.timedelta(days=x) for x in range(0, (end-start).days))
+ 
+for date_object in date_array:
+    print(date_object.strftime("%Y-%m-%d"))
+Output: 
+2023-01-01
+2023-01-02
+2023-01-03
+2023-01-04
+2023-01-05
+2023-01-06
+2023-01-07
+2023-01-08
+2023-01-09
+2023-01-10
+2023-01-11
+2023-01-12
+2023-01-13
+2023-01-14
+2023-01-15
+2023-01-16
+2023-01-17
+2023-01-18
+2023-01-19
+2023-01-20
+2023-01-21
+2023-01-22
+2023-01-23
+2023-01-24
+2023-01-25
+2023-01-26
+2023-01-27
+2023-01-28
+2023-01-29
+2023-01-30
+2023-01-31
+2023-02-01
+2023-02-02
+2023-02-03
+2023-02-04
+2023-02-05
+2023-02-06
+2023-02-07
+2023-02-08
+2023-02-09
+
+10. a = [[1,2],[3,5,6]]
+one_d_list = [x for b in a for x in b]
+
+df = pd.DataFrame(one_d_list, index= ['a', 'b', 'c', 'd', 'e'])
+df.transpose()
+
+Output:
+    a  b  c  d  e
+0  1  2  3  5  6
